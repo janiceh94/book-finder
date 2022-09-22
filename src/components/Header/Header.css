@@ -1,6 +1,7 @@
 .header-content{
     min-height: 75vh;
     background: linear-gradient(rgba(141, 39, 174, 0.3), rgba(141, 39, 174, 0.5)), url("../../images/pexels-nubia-navarro-\(nubikini\)-1517355.jpg") center/cover no-repeat;
+    flex-direction: column;
 }
 .header-title{
     font-size: 4.2rem;
