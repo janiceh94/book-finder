@@ -26,3 +26,34 @@ body{
     font-family: 'Cormorant', sans-serif;
     color: var(--black-color);
 }
+
+/* Reset */
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+button{
+    outline: 0;
+    border: none;
+    font-family: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+img{
+    width: 100%;
+    display: block;
+}
+input{
+    border: none;
+    outline: 0;
+    font-family: inherit;
+    font-size: 1.6rem;
+}
+/* Turn off transitions and animations when the window is resized */
+/* important will override ALL previous styling rule for that specific property on that element */
+.resize-animation-stopper *{
+    animation: none !important;
+    transition: none !important;
+}
