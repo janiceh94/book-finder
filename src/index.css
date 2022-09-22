@@ -70,27 +70,20 @@ input{
 }
 
 /* Text */
-.text-black{
-    color: var(--black-color);
-}
-.text-white{
-    color: var(--white-color);
-}
-.text-purple{
-    color: var(--purple-color);
-}
-.text-light-black{
-    color: var(--light-black-color);
-}
-.text-uppercase{
-    text-transform: uppercase;
-}
-.text-center{
-    text-align: center;
-}
-.text-capitalize{
-    text-transform: capitalize;
-}
-.text-italic{
-    font-style: italic;
-}
+.text-black{color: var(--black-color);}
+.text-white{color: var(--white-color);}
+.text-purple{color: var(--purple-color);}
+.text-light-black{color: var(--light-black-color);}
+.text-uppercase{text-transform: uppercase;}
+.text-center{text-align: center;}
+.text-capitalize{text-transform: capitalize;}
+.text-italic{font-style: italic;}
+
+/* Font Weight */
+.fw-3{font-weight: 300;}
+.fw-4{font-weight: 400;}
+.fw-5{font-weight: 500;}
+.fw-6{font-weight: 600;}
+.fw-7{font-weight: 700;}
+.fw-8{font-weight: 800;}
+.fw-9{font-weight: 900;}
