@@ -1,3 +1,6 @@
+# Book Finder
+Created the web app following "Book Search App With Open Library Search API Using React JS | React JS Project For Beginners" by GeekProbin to improve React skills and using APIs
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
