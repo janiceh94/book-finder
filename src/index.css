@@ -102,3 +102,32 @@ input{
 /* Letter Spacing */
 .ls-1{letter-spacing: 1px;}
 .ls-2{letter-spacing: 2px;}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-sb{
+    justify-content: space-between;
+}
+.flex-c{
+    justify-content:center;
+}
+.grid{
+    display: grid;
+}
+.containter{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Section Title */
+.section-title h2{
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 18px 0 24px 0;
+}
