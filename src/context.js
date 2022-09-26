@@ -15,11 +15,11 @@ const AppProvider = ({children}) => {
             const response = await fetch(`${URL}${searchTerm}`);
             const data = await response.json();
             const {docs} = data;
-            console.log(docs);
-
+            // console.log(docs);
+            
             if(docs){
                 const newBooks = docs.slice(0,20).map((bookSingle) => {
-                    const [key, author_name, cover_i, edition_count, first_publish_year, title] = bookSingle;
+                    const {key, author_name, cover_i, edition_count, first_publish_year, title} = bookSingle;
                     return { 
                         id: key, 
                         author: author_name, 
@@ -40,9 +40,9 @@ const AppProvider = ({children}) => {
                 setResultTitle('No Search Result Found');
             }
             setLoading(false);
-            
+
     } catch(error){
-        // console.log(error);
+        console.log(error);
         setLoading(false);
     }
 }, [searchTerm]);
