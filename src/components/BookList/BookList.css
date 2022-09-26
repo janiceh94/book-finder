@@ -41,3 +41,25 @@ span:last-child{
     font-style: italic;
     font-size: 14px;
 }
+
+@media screen and (min-width: 600px){
+    .booklist-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 992px){
+    .booklist-content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .book-item-img img{
+        max-width: 150px;
+    }
+}
+@media screen and (min-width: 992px){
+    .booklist-content{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .book-item-img img{
+        max-width: 120px;
+    }
+}
