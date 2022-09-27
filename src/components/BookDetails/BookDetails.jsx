@@ -10,12 +10,10 @@ const URL = "https://openlibrary.org/works/"
 
 const BookDetails = () => {
     const {id} = useParams();
-    const [loading, setLoading] = useState(false);
     const [book, setBook] = useState(null);
     const navigate = useNavigate();
 
     useEffect(() => {
-        setLoading(true);
         async function getBookDetails(){
             try{
                 const response = await fetch(`${URL}${id}.json`);
@@ -24,7 +22,7 @@ const BookDetails = () => {
                 if(data){
                     const {description, title, covers, subject_places, subject_times, subjects} = data;
                     const newBook = {
-                        description: description ? description.value : 'No description found',
+                        description: description ? description.value: 'No description found',
                         title: title,
                         cover_img: covers ? `https://covers.openlibrary.org/b/id/${covers[0]}-L.jpg` : coverImg,
                         subject_places: subject_places ? subject_places.join(', ') : 'No subject places found',
@@ -35,11 +33,9 @@ const BookDetails = () => {
                 } else {
                     setBook(null);
                 }
-                setLoading(false);
             }
             catch (error){
                 console.log(error);
-                setLoading(false);
             }
         } 
         getBookDetails();
@@ -53,26 +49,26 @@ const BookDetails = () => {
                     </button>
                     <div className='book-details-content grid'>
                         <div className='book-details-img'>
-                            <img src = {book ?.cover_img} alt = 'cover img'/>
+                            <img src = {book?.cover_img} alt = 'cover img'/>
                         </div>
                         <div className='book-details-info'>
                             <div className='book-details-item title'>
-                                <span className='fw-6 fs-24'>{book ?.title}</span>
+                                <span className='fw-6 fs-24'>{book?.title}</span>
                             </div>
                             <div className='book-details-item description'>
-                                <span>{book ?.description}</span>
+                                <span>{book?.description}</span>
                             </div>
                             <div className='book-details-item'>
                                 <span className='fw-6'>Subject Place: </span>
-                                <span className='text-italic'>{book ?.subject_places}</span>
+                                <span className='text-italic'>{book?.subject_places}</span>
                             </div>
                             <div className='book-details-item'>
                                 <span className='fw-6'>Subject Times: </span>
-                                <span className='text-italic'>{book ?.subject_times}</span>
+                                <span className='text-italic'>{book?.subject_times}</span>
                             </div>
                             <div className='book-details-item'>
                                 <span className='fw-6'>Subjects: </span>
-                                <span className='text-italic'>{book ?.subjects}</span>
+                                <span className='text-italic'>{book?.subjects}</span>
                             </div>
                         </div>
                     </div>
