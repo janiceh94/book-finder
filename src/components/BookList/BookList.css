@@ -26,6 +26,7 @@
 .book-item-info-item.title{
     line-height: 1.4;
     margin-bottom: 0.8rem;
+    color: var(--black-color);
 }
 .book-item-info-item.author{
     line-height: 1.4;
